@@ -1,16 +1,10 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchPosts } from "../features/posts/postsSlice";
+import { useState } from "react";
+import { useGetPostsQuery } from "../features/api/apiSlice";
+import Post from "./Post";
 
 export default function Posts() {
-    const { isLoading, isError, posts, error } = useSelector(
-        (state) => state.posts
-    );
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchPosts());
-    }, [dispatch]);
+    const [currentPostId, setCurrentPostId] = useState(null);
+    const { data: posts, isLoading, isError, error } = useGetPostsQuery(10);
 
     let content;
 
@@ -33,7 +27,12 @@ export default function Posts() {
                                 listStyleType: "sqaure",
                             }}
                         >
-                            {post.title}
+                            <a
+                                href="#"
+                                onClick={() => setCurrentPostId(post.id)}
+                            >
+                                {post.title}
+                            </a>
                         </li>
                     ))}
                 </ul>
@@ -46,6 +45,12 @@ export default function Posts() {
     return (
         <div className="p-10 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
             {content}
+
+            {currentPostId && (
+                <div className="max-w-md mx-auto mt-10 space-y-5">
+                    <Post id={currentPostId} />
+                </div>
+            )}
         </div>
     );
 }
