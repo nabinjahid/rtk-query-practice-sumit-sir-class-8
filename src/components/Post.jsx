@@ -1,4 +1,5 @@
 import { useGetPostQuery } from "../features/api/apiSlice";
+import Button from "./Button";
 
 export default function Post({ id }) {
     const { data: post, isError, isLoading, error } = useGetPostQuery(id);
@@ -24,6 +25,7 @@ export default function Post({ id }) {
     return (
         <div className="p-10 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
             {content}
+            <Button type={"danger"} id={id}>Edite</Button>
         </div>
     );
 }

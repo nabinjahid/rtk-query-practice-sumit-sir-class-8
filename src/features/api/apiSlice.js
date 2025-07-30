@@ -30,7 +30,7 @@ export const apiSlice = createApi({
                 method: "PATCH",
                 body: data,
             }),
-            providesTags: (result, error, arg) => [
+            invalidatesTags: (result, error, arg) => [
                 { type: "post", id: arg.id },
             ],
         }),

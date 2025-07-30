@@ -2,13 +2,13 @@
   "posts": [
     {
       "id": "1",
-      "title": "Post 1",
-      "body": "Post 1 body"
+      "title": "Post 1d",
+      "body": ""
     },
     {
       "id": "2",
-      "title": "Post 2",
-      "body": "Post 2 body"
+      "title": "Post 2 edited agin",
+      "body": "Post 2 body edited again"
     },
     {
       "id": "3",
@@ -16,34 +16,9 @@
       "body": "Post 3 body"
     },
     {
-      "id": "4",
-      "title": "Post 4",
-      "body": "Post 4 body"
-    },
-    {
-      "id": "5",
-      "title": "Post 5",
-      "body": "Post 5 body"
-    },
-    {
-      "id": "a63d",
-      "title": "Post 6",
-      "body": "Post 6 content"
-    },
-    {
-      "id": "d1b7",
-      "title": "Post 7",
-      "body": "Post 7 content"
-    },
-    {
-      "id": "09d5",
-      "title": "Post 8",
-      "body": "Post 8 body"
-    },
-    {
-      "id": "c1cb",
-      "title": "Post 9",
-      "body": "Post 9 content"
+      "id": "ea5e",
+      "title": "post 5",
+      "body": "post 5 body"
     }
   ]
 }
